@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Inner_door
+  - Outer_door
+  - Prompt_1
+  - Prompt_2
+  - Prompt_3
+  - BossSpawn
   layers:
   - Default
   - TransparentFX
@@ -11,9 +17,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Walls
+  - Creatures
+  - Ground
   - 
   - 
   - 
@@ -55,6 +61,9 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 3375853479
+    locked: 0
+  - name: Creatures
+    uniqueID: 45398229
     locked: 0
   m_RenderingLayers:
   - Default

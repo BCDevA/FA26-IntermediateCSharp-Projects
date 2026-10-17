@@ -7,8 +7,10 @@ using UnityEngine.UIElements;
 public class PlayerMaster : MonoBehaviour
 {
     public CharacterStats statLine;
-    public int maxHP = 100;
-    public int ATK = 5;
+    [Tooltip("Health max(int):")]
+    public int maxHP;
+    [Tooltip("Attack stat(int):")]
+    public int ATK;
     public UnityEngine.UI.Image HPBar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

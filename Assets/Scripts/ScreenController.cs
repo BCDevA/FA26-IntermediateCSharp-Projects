@@ -28,9 +28,9 @@ public class ScreenController : MonoBehaviour
 
         SceneManager.sceneLoaded += AfterBuildingScene;
     }
-    public void GoToSpecificScene(int sceneIndex, string sceneName)
+    public void GoToSpecificScene(int sceneIndex)
     {
-        Debug.Log($"Loading scene {sceneName}...");
+        Debug.Log($"Loading scene number{sceneIndex}...");
         SceneManager.LoadScene(sceneIndex);
     }
       
