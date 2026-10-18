@@ -12,6 +12,13 @@ TagManager:
   - BossSpawn
   - Health_item
   - Attack_item
+  - Act I
+  - Act II
+  - Final Act
+  - NPC Interact
+  - Prelude
+  - Boss Fight
+  - Peace
   layers:
   - Default
   - TransparentFX

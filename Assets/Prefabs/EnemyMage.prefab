@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8360957939166946044}
   - component: {fileID: 6609175620419946312}
   - component: {fileID: 992666676588014227}
-  - component: {fileID: 6511289947649807557}
-  - component: {fileID: -5636144482666847403}
+  - component: {fileID: 616543919142420186}
+  - component: {fileID: 3686611586264141352}
   m_Layer: 7
   m_Name: EnemyMage
   m_TagString: Untagged
@@ -193,7 +193,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6511289947649807557
+--- !u!114 &616543919142420186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,11 +202,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 164984862327670656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21286d9cf1c03a4488242624ec5af9d3, type: 3}
+  m_Script: {fileID: 11500000, guid: 37f78950561d5844dabba13a51d25962, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Attack
-  damage: 0
---- !u!114 &-5636144482666847403
+  m_EditorClassIdentifier: Assembly-CSharp::AssassinBehavior
+  aggroDistance: 10
+  attackFrequency: 10
+  speed: 1
+  attackRange: 10
+  attackType: 1
+  projectile: {fileID: 3983901219265685842, guid: 911527177c4947445bed3496edadc166, type: 3}
+  projectileSpeed: 8
+--- !u!114 &3686611586264141352
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,9 +221,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 164984862327670656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9492143dddda1fd40a4499d0f67c0306, type: 3}
+  m_Script: {fileID: 11500000, guid: 37ece5fc2dd06474796c1b88e73ce955, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DamageManager
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyStatMaster
+  maxHP: 0
+  ATK: 0
 --- !u!1 &2401524986925894373
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5532614348505289110}
   - component: {fileID: 7493080501438389628}
+  - component: {fileID: 8346196268238588423}
   m_Layer: 7
   m_Name: Hitbox
   m_TagString: Untagged
@@ -287,3 +296,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0030715943, y: 0.01638155}
   m_Size: {x: 0.1457489, y: 0.25464058}
   m_Direction: 0
+--- !u!114 &8346196268238588423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2401524986925894373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b6b779401089574d996ed0acbaf024b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDamageManager

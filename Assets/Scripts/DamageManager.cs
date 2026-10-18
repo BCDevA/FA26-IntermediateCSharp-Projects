@@ -11,6 +11,10 @@ public class DamageManager : MonoBehaviour
 	    gameObject.GetComponentInParent<PlayerMaster>().statLine.changeHP(-hit);
 	    Debug.Log($"{hit} damage taken!");
 	    gameObject.GetComponentInParent<PlayerMaster>().HPBar.fillAmount = (float)gameObject.GetComponentInParent<PlayerMaster>().statLine.getHP() / 100;
+	    if(gameObject.GetComponentInParent<PlayerMaster>().statLine.getHP() == 0)
+	    {
+		//TODO: Game over
+	    }
 	}
     }
 }
