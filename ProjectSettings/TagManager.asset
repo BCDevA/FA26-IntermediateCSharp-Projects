@@ -10,6 +10,8 @@ TagManager:
   - Prompt_2
   - Prompt_3
   - BossSpawn
+  - Health_item
+  - Attack_item
   layers:
   - Default
   - TransparentFX
