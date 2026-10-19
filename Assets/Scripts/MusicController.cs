@@ -1,9 +1,8 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class MusicController : MonoBehaviour
 {
-    public AudioSource musicMan;
+    public AudioSource musicMan = null;
     public AudioClip peacefulMusic;
     public AudioClip act1Music;
     public AudioClip act2Music;
@@ -28,7 +27,8 @@ public class MusicController : MonoBehaviour
 		    }
 		}
 		musicMan.Stop();
-		musicMan.PlayOneShot(peacefulMusic);
+		musicMan.resource = peacefulMusic;
+		musicMan.Play();
 		musicMan.volume = 0.1f;
 		musicMan.loop = true;
 		break;
@@ -45,7 +45,8 @@ public class MusicController : MonoBehaviour
 		    }
 		}
 		musicMan.Stop();
-		musicMan.PlayOneShot(act1Music);
+		musicMan.resource = act1Music;
+		musicMan.Play();
 		musicMan.volume = 0.1f;
 		musicMan.loop = true;
 		break;
@@ -62,14 +63,15 @@ public class MusicController : MonoBehaviour
 		    }
 		}
 		musicMan.Stop();
-		musicMan.PlayOneShot(act2Music);
+		musicMan.resource = act2Music;
+		musicMan.Play();
 		musicMan.volume = 0.1f;
 		musicMan.loop = true;
 		break;
 	    case "NPC Interact":
 		foreach (MusicController obj in GameObject.FindObjectsByType(typeof(MusicController)))
 		{
-		    if (obj.tag != "NPC Interact")
+		    if (obj.tag == "Boss Fight" || obj.tag == "Final Act")
 		    {
 			obj.GetComponent<BoxCollider2D>().enabled = true;
 		    }
@@ -79,7 +81,8 @@ public class MusicController : MonoBehaviour
 		    }
 		}
 		musicMan.Stop();
-		musicMan.PlayOneShot(npcMusic);
+		musicMan.resource = npcMusic;
+		musicMan.Play();
 		musicMan.volume = 0.1f;
 		musicMan.loop = true;
 		break;
@@ -96,7 +99,8 @@ public class MusicController : MonoBehaviour
 		    }
 		}
 		musicMan.Stop();
-		musicMan.PlayOneShot(preludeMusic);
+		musicMan.resource = preludeMusic;
+		musicMan.Play();
 		musicMan.volume = 0.1f;
 		musicMan.loop = true;
 		break;
@@ -113,17 +117,26 @@ public class MusicController : MonoBehaviour
 		    }
 		}
 		musicMan.Stop();
-		musicMan.PlayOneShot(bossMusic);
+		musicMan.resource = bossMusic;
+		musicMan.Play();
 		musicMan.volume = 0.1f;
 		musicMan.loop = true;
 		break;
 	    default:
 		foreach (MusicController obj in GameObject.FindObjectsByType(typeof(MusicController)))
 		{
+		    if (obj.tag == "NPC Interact")
+		    {
+			obj.GetComponent<BoxCollider2D>().enabled = true;
+		    }
+		    else
+		    {
 			obj.GetComponent<BoxCollider2D>().enabled = false;
+		    }
 		}
 		musicMan.Stop();
-		musicMan.PlayOneShot(act3Music);
+		musicMan.resource = act3Music;
+		musicMan.Play();
 		musicMan.volume = 0.1f;
 		musicMan.loop = true;
 		break;

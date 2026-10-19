@@ -240,7 +240,7 @@ Transform:
   m_GameObject: {fileID: 14942012}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.0028049601, w: 0.99999607}
-  m_LocalPosition: {x: 0.9, y: -0.3, z: 0}
+  m_LocalPosition: {x: -0.45, y: -0.3, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2229,6 +2229,105 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   playerObject: {fileID: 14942012}
+--- !u!1 &569601793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 569601796}
+  - component: {fileID: 569601795}
+  - component: {fileID: 569601794}
+  m_Layer: 0
+  m_Name: Act II (3)
+  m_TagString: Act II
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &569601794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569601793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ada917fe17b6a44b4d63fd8e85a7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicController
+  musicMan: {fileID: 1076236396}
+  peacefulMusic: {fileID: 8300000, guid: f761e29b10dece14eb14f124c8e57af3, type: 3}
+  act1Music: {fileID: 8300000, guid: a2b2b6ba0bdecbb49846369f1f99f40c, type: 3}
+  act2Music: {fileID: 8300000, guid: e517d311c4211c04bab3a53c95fba153, type: 3}
+  act3Music: {fileID: 8300000, guid: 6d74161ca3571e746a0970ab4b8b5ff8, type: 3}
+  npcMusic: {fileID: 8300000, guid: 5588310d47fa8d444ae6d0362dbeb6d4, type: 3}
+  preludeMusic: {fileID: 8300000, guid: 75a133bd367cd5b4a928e9cdea96a839, type: 3}
+  bossMusic: {fileID: 8300000, guid: 2af9013a98de0134698450a6ce0605be, type: 3}
+--- !u!61 &569601795
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569601793}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.4497769, y: -2.8216863}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.0347733, y: 1.1278887}
+  m_EdgeRadius: 0
+--- !u!4 &569601796
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569601793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -44, y: 26.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &606760809
 GameObject:
   m_ObjectHideFlags: 0
@@ -59093,6 +59192,105 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &1023457664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023457667}
+  - component: {fileID: 1023457666}
+  - component: {fileID: 1023457665}
+  m_Layer: 0
+  m_Name: PeacefulRespite (1)
+  m_TagString: Peace
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1023457665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023457664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ada917fe17b6a44b4d63fd8e85a7ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicController
+  musicMan: {fileID: 1076236396}
+  peacefulMusic: {fileID: 8300000, guid: f761e29b10dece14eb14f124c8e57af3, type: 3}
+  act1Music: {fileID: 8300000, guid: a2b2b6ba0bdecbb49846369f1f99f40c, type: 3}
+  act2Music: {fileID: 8300000, guid: e517d311c4211c04bab3a53c95fba153, type: 3}
+  act3Music: {fileID: 8300000, guid: 6d74161ca3571e746a0970ab4b8b5ff8, type: 3}
+  npcMusic: {fileID: 8300000, guid: 5588310d47fa8d444ae6d0362dbeb6d4, type: 3}
+  preludeMusic: {fileID: 8300000, guid: 75a133bd367cd5b4a928e9cdea96a839, type: 3}
+  bossMusic: {fileID: 8300000, guid: 2af9013a98de0134698450a6ce0605be, type: 3}
+--- !u!61 &1023457666
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023457664}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.4589634, y: 0.55738544}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 2.1912804, y: 0.7884617}
+  m_EdgeRadius: 0
+--- !u!4 &1023457667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023457664}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -43.9, y: 24.94, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1036381898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133471,6 +133669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 9012113812649877008, guid: 3aa3a6454e843784a81aa6d4aed63334, type: 3}
+      propertyPath: musicMan
+      value: 
+      objectReference: {fileID: 1076236396}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -134412,7 +134614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1551525015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137062,10 +137264,12 @@ SceneRoots:
   - {fileID: 323791870}
   - {fileID: 1076236397}
   - {fileID: 1895375955}
+  - {fileID: 1023457667}
   - {fileID: 370831601}
   - {fileID: 428084611}
   - {fileID: 1496439967}
   - {fileID: 2048620734}
+  - {fileID: 569601796}
   - {fileID: 949122912}
   - {fileID: 214538120}
   - {fileID: 2065371721}

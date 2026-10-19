@@ -1,8 +1,7 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class AssassinBehavior : MonoBehaviour
+public class EnemyBehavior : MonoBehaviour
 {
     private GameObject player;
     private bool chasing = false;
