@@ -1,8 +1,11 @@
 using System.IO;
+using UnityEditor;
+
 //using System.Text;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //switches between scenes in unity
 public class ScreenController : MonoBehaviour
@@ -15,10 +18,14 @@ public class ScreenController : MonoBehaviour
         public string GameOverScreen;
     [Tooltip("Player object:")]
         public GameObject Player;
+    [Tooltip("Canvas Object for Player Health")]
+        public Image playerHealthBar;
     [Tooltip("Name of Main Menu: ")]
         public string MainMenuName;
     [Tooltip("Save File path: ")]
-    public string filePath;
+        public string filePath;
+    [Tooltip("Audio Source Object")]
+        public AudioSource musicPlayer;
 
 
     private void Awake()
@@ -106,8 +113,14 @@ public class ScreenController : MonoBehaviour
                 //float LocationZ = Player.transform.position.z;//Location Z float
                 int SaveHealth = Player.GetComponent<PlayerMaster>().statLine.getHP();//Health int
                 int SaveAttack = Player.GetComponent<PlayerMaster>().ATK;//Attack int
+                string song = null;
+                if (musicPlayer.isPlaying)
+                {
+                    song = musicPlayer.clip.name;
+                    Debug.Log(song);
+                }
 
-            string NewLine = string.Join(',', LocationX, LocationY, SaveHealth, SaveAttack);
+            string NewLine = string.Join(',', LocationX, LocationY, SaveHealth, SaveAttack, song);
 
             saver.WriteLine(NewLine);
 
@@ -138,21 +151,40 @@ public class ScreenController : MonoBehaviour
             //float LocationZ = float.Parse(DataSections[2]);//Location Z
             int SaveHealth = int.Parse(DataSections[2]);//Health
             int SaveAttack = int.Parse(DataSections[3]);//Attack
-                                                        //UPDATE VALUES
+            string song = null;
+            AudioClip playSong = null;
+            if (DataSections[4] != null)
+            {
+                Debug.Log("Loading song...");
+                song = DataSections[4];
+                Debug.Log($"Loading {song}...");
+                playSong = Resources.Load<AudioClip>(song);
+                if (playSong != null)
+                {
+                    Debug.Log(playSong.name + "Loaded.");
+                }
+            }
+            //UPDATE VALUES
 
-            
-                Player.transform.position = new Vector2(LocationX, LocationY);//Location Changed
+
+            Player.transform.position = new Vector2(LocationX, LocationY);//Location Changed
                 Debug.Log("Location loaded...");
             
             if (IsTrue == true)
             {
-                Player.GetComponent<PlayerMaster>().statLine.changeHP(SaveHealth);
+                Player.GetComponent<PlayerMaster>().statLine.changeHP(-(100-SaveHealth));
+                playerHealthBar.fillAmount = (float)SaveHealth / 100;
                 Debug.Log("Health loaded...");
             }
             if (SaveAttack > 0)
             {
                 Player.GetComponent<PlayerMaster>().ATK = SaveAttack;
                 Debug.Log("Attack loaded...");
+            }
+            if (playSong != null)
+            {
+                musicPlayer.resource = playSong;
+                musicPlayer.Play();
             }
             Debug.Log("Finished transfer of save data to game");
         }

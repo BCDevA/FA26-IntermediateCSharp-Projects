@@ -13,7 +13,7 @@ public class PlayerMaster : MonoBehaviour
     public int ATK = 5;
     public UnityEngine.UI.Image HPBar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         statLine = new CharacterStats(maxHP, ATK);
     }

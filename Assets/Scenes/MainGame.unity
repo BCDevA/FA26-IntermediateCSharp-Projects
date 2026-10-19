@@ -59619,12 +59619,20 @@ PrefabInstance:
       objectReference: {fileID: 14942012}
     - target: {fileID: 8875315812713504520, guid: 22039e0aff035374d88d48175f0d6b9d, type: 3}
       propertyPath: filePath
-      value: SaveFile.csv
+      value: SaveFile1.csv
       objectReference: {fileID: 0}
+    - target: {fileID: 8875315812713504520, guid: 22039e0aff035374d88d48175f0d6b9d, type: 3}
+      propertyPath: musicPlayer
+      value: 
+      objectReference: {fileID: 1076236396}
     - target: {fileID: 8875315812713504520, guid: 22039e0aff035374d88d48175f0d6b9d, type: 3}
       propertyPath: CurrentSceneNum
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8875315812713504520, guid: 22039e0aff035374d88d48175f0d6b9d, type: 3}
+      propertyPath: playerHealthBar
+      value: 
+      objectReference: {fileID: 2094797525}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
