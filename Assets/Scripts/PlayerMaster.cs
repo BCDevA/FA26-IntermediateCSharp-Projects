@@ -8,9 +8,9 @@ public class PlayerMaster : MonoBehaviour
 {
     public CharacterStats statLine;
     [Tooltip("Health max(int):")]
-    public int maxHP;
+    public int maxHP = 100;
     [Tooltip("Attack stat(int):")]
-    public int ATK;
+    public int ATK = 5;
     public UnityEngine.UI.Image HPBar;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

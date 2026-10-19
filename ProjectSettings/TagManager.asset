@@ -19,6 +19,7 @@ TagManager:
   - Prelude
   - Boss Fight
   - Peace
+  - Exit_Door
   layers:
   - Default
   - TransparentFX

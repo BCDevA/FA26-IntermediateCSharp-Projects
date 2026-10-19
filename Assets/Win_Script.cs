@@ -3,24 +3,44 @@ using UnityEngine.SceneManagement;
 
 public class Win_Script : MonoBehaviour
 {
-    [Header("Should be on the object at exit")]
+    [Header("Should be on Player")]
     //public bool DidPlayerGetToEnd = false;
 
-    [Tooltip("Scene to change too(Index): ")]
-    public int SceneIndex;
-   
-   
-    private void OnTriggerEnter2D(Collider2D collision)
+    [Tooltip("Which Object are you going to enable: ")]
+    public GameObject ObjectToEnable; //should be object with a scene controller
+
+
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+
+
+
+        if (collision.CompareTag("Exit_Door"))
         {
             //DidPlayerGetToEnd = true;
-
-            ScreenController.screenController.GoToSpecificScene(SceneIndex);
+            ObjectToEnable.SetActive(true);
+            //ObjectToEnable.GetComponent<SpriteRenderer>().enabled = true;
+            Debug.Log("Player entered win zone");
 
         }
 
 
-      
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Exit_Door"))
+        {
+            //DidPlayerGetToEnd = true;
+            ObjectToEnable.SetActive(false);
+            //ObjectToEnable.GetComponent<SpriteRenderer>().enabled = true;
+            Debug.Log("Player exited win zone");
+
+        }
+
+
+
+
     }
 }
